@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LoveCalcy.css">
+    <title>Love Calculator ❤️</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="items heading">Love Calculator❤️ <span id="result"></span></div>
+        <div class="items desc">Here's the Love Calculator, which allows you to determine love compatibility and the
+            likelihood of a successful relationship.
+            <div style="color:black; font-weight: 700; ">~Developed By Seemant with ❤️</div>
+        </div>
+        <div class="items heBlock">
+            <div class="quote">He Name 🤵‍♂️</div>
+            <input id="heName" name="him" placeholder="Enter He Name" required>
+        </div>
+        <div class="items sheBlock">
+            <div class="quote">She Name 👰</div>
+            <input id="sheName" name="her" placeholder="Enter she Name" required>
+        </div>
+        <div class="items buttonBlock">
+            <button onclick="checkLovePercentage()">Check Your Love ❤️%</button>
+        </div>
+    </div>
+
+    <script>
+        function checkLovePercentage() {
+            let lovePercentage = Math.floor(Math.random() * 100);
+            document.getElementById('result').innerText = lovePercentage + "%";
+            // clear & refresh the page
+            setTimeout(() => {
+                alert('To be continue then CLICK OK.');
+                document.getElementById('heName').value = "";
+                document.getElementById('sheName').value = "";
+                window.location.reload();
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>
